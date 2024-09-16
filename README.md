@@ -1,0 +1,1 @@
+# Control 7 segment display with a potentiometer
