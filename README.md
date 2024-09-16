@@ -6,7 +6,7 @@ This project uses a potentiometer to control a seven segment display. Using an A
 1. Arduino Uno
 2. Rotary potentiometer
 3. Seven segment display (5611AS - common cathode)
-4. 220 kΩ resistor
+4. 220Ω resistor
 
 ## Potentiometer pins
 ![Potentiometer Pins](pot_img.png)
