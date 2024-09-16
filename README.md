@@ -61,14 +61,14 @@ void loop() {
 }
 ```
 This sketch uses the SevSeg library to control the seven segment display. A seven segment object is created on line 3 right after the include statement. The display is initialized with the ```sevseg.begin()``` function on line 17 of the code. The other functions are described below:
-<br>
-```hardwareConfig = COMMON_CATHODE;``` : This sets the type of display of the seven segment display. Since this display is of a common-cathode type, I have set it to COMMON_CATHODE. <br>
-```byte numDigits = 1;``` : This sets the number of digits on the display. Since I am using a single-digit display, I have set it to 1. <br>
-```byte digitPins[] = {};``` : This function creates an array that defines the ground pins when using a multi-digit display. Since this project uses a seven-segment display, I have left it empty. <br>
-```byte segmentPins[] = {7,6,4,2,1,9,10,5};``` This declares an arry which defines which Arduino pins are connected to the segment pins from A-G, DP. For example, segment A is connected to pin 7 and DP is connected to pin 5. <br>
-```bool resistorsOnSegments = true;``` This needs to be set to true if current limiting resistors are connected in series with the segment pins. In this project, I have connected the common cathode pin to a current limiting resistor. Since the common cathode terminal is connected to each of the segment pins, set this flag to be true. <br>
-```sevseg.setBrightness(90)``` : This function sets the brightness of the display. It can be adjusted from 0 to 100. <br>
-```int potentValue = analogRead(A0);``` This function reads the value from the potentiometer driving pin to a number in the range of 0 to 1024. <br>
-```int value = map(potentValue, 0, 1023, 0, 9);``` This function scales the value from the potentiometer down to an equivalent value in the range of 0-9. <br>
-```sevseg.setNumber(value);``` : This function sets the number on the display. For example, if value was set to 4, the display would show the number 4. <br>
-```sevseg.refreshDisplay();``` : This function is required at the end of the loop section to keep displaying and updating the number.<br>
+<br><br>
+```hardwareConfig = COMMON_CATHODE;``` : This sets the type of display of the seven segment display. Since this display is of a common-cathode type, I have set it to COMMON_CATHODE. <br><br>
+```byte numDigits = 1;``` : This sets the number of digits on the display. Since I am using a single-digit display, I have set it to 1. <br><br>
+```byte digitPins[] = {};``` : This function creates an array that defines the ground pins when using a multi-digit display. Since this project uses a seven-segment display, I have left it empty. <br><br>
+```byte segmentPins[] = {7,6,4,2,1,9,10,5};``` This declares an arry which defines which Arduino pins are connected to the segment pins from A-G, DP. For example, segment A is connected to pin 7 and DP is connected to pin 5. <br><br>
+```bool resistorsOnSegments = true;``` This needs to be set to true if current limiting resistors are connected in series with the segment pins. In this project, I have connected the common cathode pin to a current limiting resistor. Since the common cathode terminal is connected to each of the segment pins, set this flag to be true. <br><br>
+```sevseg.setBrightness(90)``` : This function sets the brightness of the display. It can be adjusted from 0 to 100. <br><br>
+```int potentValue = analogRead(A0);``` This function reads the value from the potentiometer driving pin to a number in the range of 0 to 1024. <br><br>
+```int value = map(potentValue, 0, 1023, 0, 9);``` This function scales the value from the potentiometer down to an equivalent value in the range of 0-9. <br><br>
+```sevseg.setNumber(value);``` : This function sets the number on the display. For example, if value was set to 4, the display would show the number 4. <br><br>
+```sevseg.refreshDisplay();``` : This function is required at the end of the loop section to keep displaying and updating the number.<br><br>
